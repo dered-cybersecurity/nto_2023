@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG  -m64 -rdynamic CMakeFiles/test_m68k.dir/tests/unit/test_m68k.c.o -o test_m68k  -Wl,-rpath,/home/c3nt/Projects/Olymp_tasks/Old_Times/uni/unicorn/build libunicorn.so.2 -lpthread -lm 

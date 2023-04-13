@@ -1,0 +1,28 @@
+<p>n = {{n}}</p>
+<pre><code><span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> Flask, render_template, request
+<span class="hljs-keyword">from</span> flag <span class="hljs-keyword">import</span> flag
+<span class="hljs-keyword">from</span> Crypto.Util.number <span class="hljs-keyword">import</span> *
+<span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> randint
+</code></pre><pre><code><span class="hljs-built_in">assert</span> <span class="hljs-built_in">flag</span>.endswith(b<span class="hljs-string">'}'</span>)
+<span class="hljs-built_in">flag</span> = bytes_to_long(<span class="hljs-built_in">flag</span>)
+</code></pre><pre><code><span class="hljs-built_in">flag</span> = bin(<span class="hljs-built_in">flag</span>)[<span class="hljs-number">2</span>:]
+<span class="hljs-built_in">assert</span> <span class="hljs-built_in">flag</span>[-<span class="hljs-number">2</span>] == <span class="hljs-string">'0'</span>
+</code></pre><pre><code><span class="hljs-attr">n</span> = getPrime(<span class="hljs-number">512</span>) * getPrime(<span class="hljs-number">512</span>)
+<span class="hljs-attr">app</span> = Flask(__name__)
+</code></pre><pre><code>@app.route(<span class="hljs-string">'/'</span>)
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">intro</span><span class="hljs-params">()</span></span>:
+    <span class="hljs-keyword">return</span> render_template(<span class="hljs-string">'intro.html'</span>, n = n)
+</code></pre><pre><code>@app.route(<span class="hljs-string">'/guess_bit'</span>, methods=[<span class="hljs-string">'GET'</span>])
+def guess_bit():
+    <span class="hljs-keyword">args</span> = request.<span class="hljs-keyword">args</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-string">'bit'</span> not in <span class="hljs-keyword">args</span>.<span class="hljs-built_in">keys</span>():
+        <span class="hljs-keyword">return</span> {<span class="hljs-string">"error"</span>: <span class="hljs-string">"Bit needed to be guessed"</span>}
+    <span class="hljs-built_in">index</span> = <span class="hljs-built_in">abs</span>(<span class="hljs-keyword">int</span>(<span class="hljs-keyword">args</span>[<span class="hljs-string">'bit'</span>]))
+    <span class="hljs-keyword">if</span> <span class="hljs-built_in">index</span> &gt;= <span class="hljs-built_in">len</span>(flag):
+        <span class="hljs-keyword">return</span> {<span class="hljs-string">"error"</span>: <span class="hljs-string">"Index overflow"</span>}
+    bit = flag[<span class="hljs-built_in">index</span>]
+    <span class="hljs-keyword">if</span> bit == <span class="hljs-string">'1'</span>:
+        <span class="hljs-keyword">return</span> {<span class="hljs-string">"guess"</span>: <span class="hljs-built_in">pow</span>(<span class="hljs-number">7</span>, getPrime(<span class="hljs-number">300</span>), n)}
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">return</span> {<span class="hljs-string">"guess"</span>: randint(n//<span class="hljs-number">2</span>, n)}
+</code></pre>

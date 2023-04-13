@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG  -m64 -rdynamic CMakeFiles/test_sparc.dir/tests/unit/test_sparc.c.o -o test_sparc  -Wl,-rpath,/home/c3nt/Projects/Olymp_tasks/Old_Times/uni/unicorn/build libunicorn.so.2 -lpthread -lm 

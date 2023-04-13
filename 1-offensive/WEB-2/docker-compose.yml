@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  service1:
+    build: ./service1
+    restart: always
+    ports:
+      - 3000:3000
+    environment:
+      PG_HOST: db
+      FLAG: NTO{request_smuggling_917a34072663f9c8beea3b45e8f129c5}
+
+  service2:
+    build: ./service2
+    restart: always
+    ports:
+      - 3001:3001
+    environment:
+      FLAG: NTO{request_smuggling_917a34072663f9c8beea3b45e8f129c5}
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ctf

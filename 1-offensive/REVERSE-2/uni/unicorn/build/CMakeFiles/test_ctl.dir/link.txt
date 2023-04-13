@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG  -m64 -rdynamic CMakeFiles/test_ctl.dir/tests/unit/test_ctl.c.o -o test_ctl  -Wl,-rpath,/home/c3nt/Projects/Olymp_tasks/Old_Times/uni/unicorn/build libunicorn.so.2 -lpthread -lm 

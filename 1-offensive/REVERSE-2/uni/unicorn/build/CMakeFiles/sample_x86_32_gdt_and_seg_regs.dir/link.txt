@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG  -m64 -rdynamic CMakeFiles/sample_x86_32_gdt_and_seg_regs.dir/samples/sample_x86_32_gdt_and_seg_regs.c.o -o sample_x86_32_gdt_and_seg_regs  -Wl,-rpath,/home/c3nt/Projects/Olymp_tasks/Old_Times/uni/unicorn/build libunicorn.so.2 -lpthread -lm 

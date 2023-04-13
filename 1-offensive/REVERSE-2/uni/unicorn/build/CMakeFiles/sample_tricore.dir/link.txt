@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG  -m64 -rdynamic CMakeFiles/sample_tricore.dir/samples/sample_tricore.c.o -o sample_tricore  -Wl,-rpath,/home/c3nt/Projects/Olymp_tasks/Old_Times/uni/unicorn/build libunicorn.so.2 -lpthread -lm 

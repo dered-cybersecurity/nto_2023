@@ -1,0 +1,16 @@
+version: '3.3'
+services:
+
+  web:
+    build: task
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: '500M'
+    restart: on-failure
+    environment:
+      - "FLAG=nto{pr0t0typ3_pollut10n_g4dged5_f56acc00f5eb803de88496b}"
+      - "PORT=3000"
+    ports:
+      - '3000:3000'

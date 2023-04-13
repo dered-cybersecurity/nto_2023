@@ -1,0 +1,9 @@
+version: '3'
+services:
+    knuckles_server:
+        environment:
+            - FLAG=nto{C00l_4nd_0bv105ly_n07_UCUCUGA}
+        container_name: knuckles_server
+        build: ./
+        ports:
+            - "1337:1337"

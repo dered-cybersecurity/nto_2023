@@ -1,0 +1,18 @@
+{% extends "layouts/layout.html" %}
+{% block content %}
+<form action="/login" method="post">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Логин</label>
+    <input type="text" class="form-control" id="loginInput" name="username">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Пароль</label>
+    <input type="password" class="form-control" id="passwordInput" name="password">
+  </div>
+  <button type="submit" class="btn btn-primary" id="btn">Войти</button>
+  {% if "/login" in request.headers.get("Referer", "") %}
+    <label class="text-danger" for="btn">Неправильный логин или пароль</label>
+  {% endif %}
+    <a href="/register">Нет аккаунта? Зарегистрироваться</a>
+</form>
+{% endblock %}

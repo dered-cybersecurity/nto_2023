@@ -1,0 +1,21 @@
+CREATE /home/c3nt/Projects/Olymp_tasks/Old_Times/uni/unicorn/build/libunicorn.a
+ADDLIB $<TARGET_FILE:unicorn_static>
+ADDLIB $<TARGET_FILE:unicorn-common>
+ADDLIB $<TARGET_FILE:x86_64-softmmu>
+ADDLIB $<TARGET_FILE:arm-softmmu>
+ADDLIB $<TARGET_FILE:aarch64-softmmu>
+ADDLIB $<TARGET_FILE:m68k-softmmu>
+ADDLIB $<TARGET_FILE:mips-softmmu>
+ADDLIB $<TARGET_FILE:mipsel-softmmu>
+ADDLIB $<TARGET_FILE:mips64-softmmu>
+ADDLIB $<TARGET_FILE:mips64el-softmmu>
+ADDLIB $<TARGET_FILE:sparc-softmmu>
+ADDLIB $<TARGET_FILE:sparc64-softmmu>
+ADDLIB $<TARGET_FILE:ppc-softmmu>
+ADDLIB $<TARGET_FILE:ppc64-softmmu>
+ADDLIB $<TARGET_FILE:riscv32-softmmu>
+ADDLIB $<TARGET_FILE:riscv64-softmmu>
+ADDLIB $<TARGET_FILE:s390x-softmmu>
+ADDLIB $<TARGET_FILE:tricore-softmmu>
+SAVE
+END

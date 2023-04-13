@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 > input {
+    display: block;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    font-size: 1em;
+}
+

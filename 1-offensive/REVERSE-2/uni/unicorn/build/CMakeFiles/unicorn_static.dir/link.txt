@@ -1,0 +1,2 @@
+/usr/bin/ar qc libunicorn_static.a CMakeFiles/unicorn_static.dir/uc.c.o CMakeFiles/unicorn_static.dir/qemu/softmmu/vl.c.o CMakeFiles/unicorn_static.dir/qemu/hw/core/cpu.c.o
+/usr/bin/ranlib libunicorn_static.a

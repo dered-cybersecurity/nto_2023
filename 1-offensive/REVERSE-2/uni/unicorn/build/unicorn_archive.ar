@@ -1,0 +1,21 @@
+CREATE /home/c3nt/Projects/Olymp_tasks/Old_Times/uni/unicorn/build/libunicorn.a
+ADDLIB /home/c3nt/Projects/Olymp_tasks/Old_Times/uni/unicorn/build/libunicorn_static.a
+ADDLIB /home/c3nt/Projects/Olymp_tasks/Old_Times/uni/unicorn/build/libunicorn-common.a
+ADDLIB /home/c3nt/Projects/Olymp_tasks/Old_Times/uni/unicorn/build/libx86_64-softmmu.a
+ADDLIB /home/c3nt/Projects/Olymp_tasks/Old_Times/uni/unicorn/build/libarm-softmmu.a
+ADDLIB /home/c3nt/Projects/Olymp_tasks/Old_Times/uni/unicorn/build/libaarch64-softmmu.a
+ADDLIB /home/c3nt/Projects/Olymp_tasks/Old_Times/uni/unicorn/build/libm68k-softmmu.a
+ADDLIB /home/c3nt/Projects/Olymp_tasks/Old_Times/uni/unicorn/build/libmips-softmmu.a
+ADDLIB /home/c3nt/Projects/Olymp_tasks/Old_Times/uni/unicorn/build/libmipsel-softmmu.a
+ADDLIB /home/c3nt/Projects/Olymp_tasks/Old_Times/uni/unicorn/build/libmips64-softmmu.a
+ADDLIB /home/c3nt/Projects/Olymp_tasks/Old_Times/uni/unicorn/build/libmips64el-softmmu.a
+ADDLIB /home/c3nt/Projects/Olymp_tasks/Old_Times/uni/unicorn/build/libsparc-softmmu.a
+ADDLIB /home/c3nt/Projects/Olymp_tasks/Old_Times/uni/unicorn/build/libsparc64-softmmu.a
+ADDLIB /home/c3nt/Projects/Olymp_tasks/Old_Times/uni/unicorn/build/libppc-softmmu.a
+ADDLIB /home/c3nt/Projects/Olymp_tasks/Old_Times/uni/unicorn/build/libppc64-softmmu.a
+ADDLIB /home/c3nt/Projects/Olymp_tasks/Old_Times/uni/unicorn/build/libriscv32-softmmu.a
+ADDLIB /home/c3nt/Projects/Olymp_tasks/Old_Times/uni/unicorn/build/libriscv64-softmmu.a
+ADDLIB /home/c3nt/Projects/Olymp_tasks/Old_Times/uni/unicorn/build/libs390x-softmmu.a
+ADDLIB /home/c3nt/Projects/Olymp_tasks/Old_Times/uni/unicorn/build/libtricore-softmmu.a
+SAVE
+END
